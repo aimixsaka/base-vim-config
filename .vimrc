@@ -17,7 +17,12 @@ set shiftwidth=4
 set expandtab " transfer tab to space
 set autoindent
 
+" set nowrap
+set nowrap
 
+" set default split window position
+set splitright
+set splitbelow
 
 syntax enable " enalbe syntax hightlight
 
@@ -83,6 +88,13 @@ nnoremap <silent> <leader>wq :wq<CR>
 nnoremap <silent> <leader>q :q<CR>
 nnoremap <silent> <leader>qa :wqall<CR>
 
+" autopair
+inoremap <silent> ( ()<ESC>i
+inoremap <silent> { {}<ESC>i
+inoremap <silent> [ []<ESC>i
+inoremap <silent> " ""<ESC>i
+inoremap <silent> ' ''<ESC>i
+
 nnoremap <silent> <leader>b :Buffers<CR>
 nnoremap <silent> <C-f> :Files<CR>
 nnoremap <silent> <leader>f :Rg<CR>
@@ -94,8 +106,9 @@ nnoremap <silent> <leader>hh :History<CR>
 nnoremap <silent> <leader>h: :History:<CR>
 nnoremap <silent> <leader>h/ :History/<CR>
 
-inoremap <c-u> <c-g>u<c-u>
-inoremap <c-w> <c-g>u<c-w>
+" set undo savepoint before truly use <C-u> and <C-w>
+inoremap <C-u> <C-g>u<C-u>
+inoremap <C-w> <C-g>u<C-w>
 
 """""""""""""""
 """ autocmd """
