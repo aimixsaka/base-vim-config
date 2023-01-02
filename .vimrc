@@ -1,7 +1,7 @@
 """"""""""""""""
 """ comm set """
 """"""""""""""""
-"" To enabel netrw
+" To enabel netrw
 " set nocompatible
 set nocp 
 
@@ -81,6 +81,7 @@ call plug#end()
 """""""""""""""""
 " let mapleader = "\<Space>"
 let mapleader = " "
+noremap <silent> <leader> <Nop>
 
 " convinient save and quit
 nnoremap <silent> <leader>w :w<CR>     
@@ -109,6 +110,12 @@ nnoremap <silent> <leader>h/ :History/<CR>
 " set undo savepoint before truly use <C-u> and <C-w>
 inoremap <C-u> <C-g>u<C-u>
 inoremap <C-w> <C-g>u<C-w>
+
+" resize window
+nnoremap <leader>h :vertical resize +3<CR>
+nnoremap <leader>l :vertical resize -3<CR>
+nnoremap <leader>j :resize -3<CR>
+nnoremap <leader>k :resize +3<CR>
 
 """""""""""""""
 """ autocmd """
