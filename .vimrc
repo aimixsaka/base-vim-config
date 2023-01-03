@@ -56,6 +56,10 @@ set foldmethod=syntax
 " set keymap timeout
 set timeoutlen=400
 
+
+" paste mode (can prevent indent wrong when paste)
+set pastetoggle=<F3>
+
 """""""""""""""""
 """ vim-plug """
 """""""""""""""""
@@ -79,7 +83,6 @@ call plug#end()
 """""""""""""""""
 """ key map """
 """""""""""""""""
-" let mapleader = "\<Space>"
 let mapleader = " "
 noremap <silent> <leader> <Nop>
 
@@ -116,6 +119,7 @@ nnoremap <leader>h :vertical resize +3<CR>
 nnoremap <leader>l :vertical resize -3<CR>
 nnoremap <leader>j :resize -3<CR>
 nnoremap <leader>k :resize +3<CR>
+
 
 """""""""""""""
 """ autocmd """
